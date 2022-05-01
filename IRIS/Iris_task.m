@@ -69,7 +69,7 @@ features = features - 1;
 
 
 
-% --------------- Linear classifier ----------------------------
+% --------------- Linear classifier ---------------------------------------------------------------------------------
 
 % Targets
 e1 = [1 0 0].';
@@ -91,7 +91,8 @@ predTrain = predClasses(W, trainSet, trainKnown);
 
 
 
-% ---------------- Plot confusion matrix -----------------------
+
+% ---------------- Plot confusion matrix ----------------------------------------------------------------------------
 
 figure(1)
 plotconfusion(testKnown, predTest);
@@ -114,7 +115,9 @@ ylabel("True label",'FontSize', 12, 'FontWeight', 'bold');
 xticklabels({'Setosa','Versicolour','Virginica'});
 yticklabels({'Setosa','Versicolour','Virginica'});
 
-% --------------- Error rates ---------------------------------------------
+
+
+% --------------- Error rates ---------------------------------------------------------------------------------------
 
 errorTest = numErrors(testKnown, predTest)/length(testKnown)*100;
 errorTrain = numErrors(trainKnown, predTrain)/length(trainKnown)*100;
@@ -123,7 +126,9 @@ disp(errorTrain);
 disp('Testing Error rate: ');
 disp(errorTest);
 
-% --------------- Functions -----------------------------------------------
+
+
+% --------------- Functions -----------------------------------------------------------------------------------------
 
 function pred = predClasses(W, xt, trueClasses)
         pred = zeros(size(trueClasses));
