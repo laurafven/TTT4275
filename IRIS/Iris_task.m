@@ -1,7 +1,7 @@
 clear all
 close all
 
-% --------------- Preparing the data --------------------------------------
+% --------------- Preparing the data --------------------------------------------------------------------------------
 
 classes = 3;
 features = 4;
@@ -17,7 +17,7 @@ numData = 50;
 
 
 
-% --------------- Defining the testSets for different cases ---------------
+% --------------- Defining the testSets for different cases ---------------------------------------------------------
 
 % First 30 data points for training and the last 20 for testing
 % trainSet = [class1(1:numTrain,:).', class2(1:numTrain,:).', class3(1:numTrain,:).'];
@@ -46,7 +46,7 @@ true_class_train = [ones(numTrain); 2*ones(numTrain); 3*ones(numTrain)];
 
 
 
-% --------------- Removing features ---------------------------------------
+% --------------- Removing features ---------------------------------------------------------------------------------
 
 %Removing feature 2
 class1(:,2) = [];
